@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" placeholder="Enter Your Marks" id="hindi">
+    <input type="text" placeholder="Enter Your Marks" id="english">
+    <input type="text" placeholder="Enter Your Marks" id="math" >
+    <input type="text" placeholder="Enter Your Marks" id="social" >
+    <input type="text" placeholder="Enter Your Marks" id="science">
+
+    <button onclick="result()">check value</button>
+    <p id="check-result"></p>
+
+    <script>
+      function result() {
+        let hindi = parseInt(document.getElementById("hindi").value);
+        let english = parseInt(document.getElementsByClassName("english").value );
+        let math = parseInt(document.getElementById("math").value);
+        let social = parseInt(document.getElementById("social").value);
+        let science = parseInt(document.getElementById("science").value);
+
+        let percentage = (hindi + english + math + social + science) / 5;
+
+        if (percentage > 80) {
+          console.log("A+", percentage);
+          document.getElementById('check-result').innerText = "A+", percentage;
+        }
+        //  else if (percentage > 60 && percentage < 80) {
+        //   console.log("A", percentage);
+        //   document.getElementById('check-result').innerText = "A", percentage;
+        // }
+        // else if(percentage > 45 , percentage < 60){
+        //     console.log("B" ,percentage);
+        //     document.getElementById('check-result').innerText = "B" , percentage;
+        // }
+
+      }
+    </script>
+  </body>
+</html>

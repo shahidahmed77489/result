@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Hindi</label><br>
+    <input type="text" placeholder="Enter Your Mark" id="Hindi">
+    <input type="text" placeholder="Enter Your Mark" id="English">
+
+    
+    <input type="text" placeholder="Enter Your Mark" id="Math">
+    <input type="text" placeholder="Enter Your Mark" id="Social-science">
+    <input type="text" placeholder="Enter Your Mark" id="Science">
+
+    <button onclick="result()">Check Result</button>
+    <p id="final-result"></p>
+
+    <script>
+
+        function result()
+        {
+            //use keyword camel case
+            let Hindi =parseInt(document.getElementById('Hindi').value);
+            let English =parseInt(document.getElementById('English').value);
+            let Math =parseInt(document.getElementById('Math').value);
+            let Socialscience =parseInt(document.getElementById('Social-science').value);
+            let Science =parseInt(document.getElementById('Science').value);
+
+            let percentage =(Hindi + English + Math + Socialscience + Science) / 5;
+
+        if(Hindi>33 && English>33 && Math>33 && Socialscience>33 && Science>33 ) 
+            {
+        if (percentage > 80) {
+            console.log("A+", percentage);
+            document.getElementById('final-result').innerText = "A+" ,percentage;
+         }
+
+          else if ( percentage > 60 && percentage < 80) {
+            console.log("A" , percentage);
+            document.getElementById('final-result').innerText = "A",percentage;
+         }
+
+         else if (percentage > 45 && percentage < 60) {
+            console.log("B" , percentage);
+            document.getElementById('final-result').innerText = "B" ,percentage;
+         }
+
+         else if( percentage > 33 && percentage < 45) {
+            console.log("C" , perecentage);
+            document.getElementById('final-result').innerText = "C", perecentage;
+         }
+        }
+         else{
+            console.log("failed");
+            document.getElementById('final-result').innerText = "failed";
+         }
+        }
+            
+    </script>
+
+</body>
+</html>
